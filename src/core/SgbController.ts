@@ -93,6 +93,8 @@ export class SgbController {
 	}
 
 	public students(course_id: number) {
+		const course = courses_list.find(course => course.id == course_id);
+
 		const student_ids = courses_students
 							.filter(course_student => course_student.course_id == course_id)
 							.map(student => student.student_id);
@@ -101,7 +103,10 @@ export class SgbController {
 						 .map(student_id => student_list
 						 .find(student => student.id == student_id));
 
-		return students;
+		return {
+			course, 
+			students
+		}
 	}
 
 	// public students(token: string,course_id:number) {

@@ -258,7 +258,7 @@ export class SgbRouter {
 	 * @apiDescription Récupération de tous les cours enseigner par un enseignant
 	 * @apiVersion 1.0.0
 	 *
-	 * @apiParam {String} token Authentification token dans le header.
+	 * @apiParam {String} teacherId id de l'enseignant.
 	 *
 	 *  @apiSuccess (200) {String} json
 	 */

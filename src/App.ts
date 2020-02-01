@@ -4,7 +4,7 @@ import logger from 'morgan';
 import * as bodyParser from 'body-parser';
 
 import { sgbRoutes } from './routes/SgbRouter';
-import { sgbRoutesV2 } from './routes/SgbRouterV2';
+// import { sgbRoutesV2 } from './routes/SgbRouterV2';
 
 
 // Creates and configures an ExpressJS web server.
@@ -41,7 +41,7 @@ class App {
 
     this.express.use('/', router);  // routage de base
     this.express.use('/api/v1', sgbRoutes.router);  // tous les URI pour le scénario du système de gestion des bordereau commencent ainsi
-    this.express.use('/api/v2', sgbRoutesV2.router);  // tous les URI pour le scénario du système de gestion des bordereau commencent ainsi
+    // this.express.use('/api/v2', sgbRoutesV2.router);  // tous les URI pour le scénario du système de gestion des bordereau commencent ainsi
   }
 
 }
