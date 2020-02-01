@@ -1,0 +1,14 @@
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Verdana
+skinparam sequence {
+    MessageAlign center
+}
+title DSS - CU01A - Ajouter cours
+participant ":SGA" as c
+participant ":SGB" as s
+c->s : GET http://localhost:3001/api/v1/courses?teacherId=ID_DU_PROF
+c<<--s : liste cours de l'enseignant
+c->s : GET http://localhost:3001/api/v1/course/ID_DU_COURS/students
+c<<--s : information cours + liste étudiants
+@enduml
